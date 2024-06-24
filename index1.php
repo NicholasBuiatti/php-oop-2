@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . "/data.php";
+include __DIR__ . "/store/data.php";
 
 ?>
 
@@ -17,9 +17,9 @@ include __DIR__ . "/data.php";
 <body>
     <h1>Prodotti</h1>
 
-    <ul>
-        <li><?php echo $prodotto1->showDetails() . $prodotto1->getAnimalDetails(); ?></li>
-    </ul>
+    <p><?php echo $prodottoFood->showDetails() . $prodottoFood->getAnimalDetails(); ?></p>
+    <p><?php echo $prodottoBed->showDetails() . $prodottoBed->getAnimalDetails(); ?></p>
+    <p><?php echo $prodottoToy->showDetails() . $prodottoToy->getAnimalDetails(); ?></p>
 </body>
 
 </html>

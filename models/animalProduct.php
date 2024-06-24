@@ -9,7 +9,7 @@ class AnimalProduct
 
     public function getAnimalDetails()
     {
-        return "Animal: $this->animalType <img src='$this->icon' style='width:20px;height:auto;'>";
+        return "Categoria: $this->animalType <img src='$this->icon' style='width:20px;height:auto;'>";
     }
 
     // CAPIRE BENE COSA SAREBBE LA FUNZIONE __TOSTRING

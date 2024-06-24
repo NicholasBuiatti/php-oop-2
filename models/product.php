@@ -1,6 +1,4 @@
 <?php
-// include __DIR__ . "/animalProduct.php";
-
 class Product
 {
 
@@ -10,9 +8,9 @@ class Product
 
     public function showDetails()
     {
-        return "<img src='$this->img' style='width:100px;height:auto;'><br>
-        Nome: $this->name,<br>
-        Prezzo: $this->price €,<br>";
+        return "<img src='$this->img' style='width:100px;height:auto;'> <br>
+        Nome: $this->name <br>
+        Prezzo: $this->price € <br>";
     }
 
     public function getAnimalDetails()
