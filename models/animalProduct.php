@@ -1,9 +1,20 @@
 <?php
 
-class AnimalProduct extends Product
+class AnimalProduct
 {
 
-    public function __construct(public $name, public $price, public $img, public $animalType)
+    public function __construct(public $animalType, public $icon)
     {
+    }
+
+    public function getAnimalDetails()
+    {
+        return "Animal: $this->animalType <img src='$this->icon' style='width:20px;height:auto;'>";
+    }
+
+    // CAPIRE BENE COSA SAREBBE LA FUNZIONE __TOSTRING
+    public function __toString()
+    {
+        return $this->animalType;
     }
 }

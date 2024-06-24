@@ -18,9 +18,7 @@ include __DIR__ . "/data.php";
     <h1>Prodotti</h1>
 
     <ul>
-        <li><?php foreach ($prodotto2 as $key => $value) {
-                echo "$key : $value <br>";
-            }  ?></li>
+        <li><?php echo $prodotto1->showDetails() . $prodotto1->getAnimalDetails(); ?></li>
     </ul>
 </body>
 
