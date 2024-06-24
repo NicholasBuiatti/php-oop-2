@@ -17,9 +17,14 @@ include __DIR__ . "/store/data.php";
 <body>
     <h1>Prodotti</h1>
 
-    <p><?php echo $prodottoFood->showDetails() . $prodottoFood->getAnimalDetails(); ?></p>
-    <p><?php echo $prodottoBed->showDetails() . $prodottoBed->getAnimalDetails(); ?></p>
-    <p><?php echo $prodottoToy->showDetails() . $prodottoToy->getAnimalDetails(); ?></p>
+    <ul>
+        <li>
+            <?php foreach ($productStore as $product) {
+                echo $product->showDetails() . $product->getAnimalDetails();
+            } ?>
+        </li>
+    </ul>
+
 </body>
 
 </html>

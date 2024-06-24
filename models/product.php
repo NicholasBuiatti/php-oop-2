@@ -17,4 +17,9 @@ class Product
     {
         return $this->animalType->getAnimalDetails();
     }
+
+    public function getProductType()
+    {
+        return "Generic Product";
+    }
 };

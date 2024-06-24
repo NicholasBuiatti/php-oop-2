@@ -18,4 +18,9 @@ class Food extends Product
     {
         return $this->animalType->getAnimalDetails();
     }
+
+    public function getProductType()
+    {
+        return "Food";
+    }
 }

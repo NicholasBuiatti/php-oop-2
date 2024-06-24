@@ -18,4 +18,9 @@ class Bed extends Product
     {
         return $this->animalType->getAnimalDetails();
     }
+
+    public function getProductType()
+    {
+        return "Bed";
+    }
 }
