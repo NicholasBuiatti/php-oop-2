@@ -19,24 +19,21 @@ include __DIR__ . "/store/data.php";
 </head>
 
 <body class="bg-dark text-white">
-    <h1>Prodotti</h1>
+    <h1 class="text-center mb-5">Prodotti per gli animali</h1>
 
     <section class="container">
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="<?= $crocchetteGatti->getImage() ?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <?php echo $crocchetteGatti->getinfo(); ?>
-                    <p>Categoria: <?php echo $crocchetteGatti->getAnimalDetails(); ?></p>
+        <div class="row justify-content-between">
+            <?php foreach ($productStore as $product) { ?>
+                <div class="card" style="width: 18rem;">
+                    <img src="<?= $product->getImage() ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <?php echo $product->getinfo(); ?>
+                        <p>Categoria: <?php echo $product->getAnimalDetails(); ?></p>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </section>
-
-    <pre>
-        <?php var_dump($productStore) ?>
-    </pre>
-
 </body>
 
 </html>
