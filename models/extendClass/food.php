@@ -2,25 +2,15 @@
 
 class Food extends Product
 {
-    public function __construct(public $img, public $name, public $price, public AnimalProduct $animalType, public $kg)
-    {
-    }
+    public $peso;
 
-    public function showDetails()
+    public function __construct($percorsoIimg, $name, $price, AnimalProduct $animalType, $peso)
     {
-        return "<img src='$this->img' style='width:100px;height:auto;'><br>
-        Nome: $this->name <br>
-        Prezzo: $this->price € <br>
-        Peso: $this->kg KG <br>";
-    }
+        $this->img = $percorsoIimg;
+        $this->name = $name;
+        $this->price = $price;
+        $this->animalType = $animalType;
 
-    public function getAnimalDetails()
-    {
-        return $this->animalType->getAnimalDetails();
-    }
-
-    public function getProductType()
-    {
-        return "Food";
+        $this->peso = $peso;
     }
 }

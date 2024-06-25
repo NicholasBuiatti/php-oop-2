@@ -1,25 +1,33 @@
 <?php
 class Product
 {
+    public $img;
+    public $name;
+    public $price;
+    //CLASSE CATEGORIA CREATA A SE
+    public $animalType;
 
-    public function __construct(public $img, public $name, public $price, public AnimalProduct $animalType)
+    public function __construct($percorsoIimg, $name, $price, AnimalProduct $animalType)
     {
+        $this->img = $percorsoIimg;
+        $this->name = $name;
+        $this->price = $price;
+        $this->animalType = $animalType;
     }
 
-    public function showDetails()
+    public function getImage()
     {
-        return "<img src='$this->img' style='width:100px;height:auto;'> <br>
-        Nome: $this->name <br>
-        Prezzo: $this->price € <br>";
+        return $this->img;
+    }
+
+    public function getInfo()
+    {
+        return "Nome: <h3>$this->name</h3>
+                Prezzo: <h3>$this->price €</h3>";
     }
 
     public function getAnimalDetails()
     {
-        return $this->animalType->getAnimalDetails();
-    }
-
-    public function getProductType()
-    {
-        return "Generic Product";
+        return $this->animalType->getIcon();
     }
 };

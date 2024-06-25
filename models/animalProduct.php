@@ -2,14 +2,18 @@
 
 class AnimalProduct
 {
+    public $animalType;
+    public $icon;
 
-    public function __construct(public $animalType, public $icon)
+    public function __construct($animalType, $icon)
     {
+        $this->animalType = $animalType;
+        $this->icon = $icon;
     }
 
-    public function getAnimalDetails()
+    public function getIcon()
     {
-        return "Categoria: $this->animalType <img src='$this->icon' style='width:20px;height:auto;'>";
+        return $this->icon;
     }
 
     // CAPIRE BENE COSA SAREBBE LA FUNZIONE __TOSTRING

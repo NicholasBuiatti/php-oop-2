@@ -2,25 +2,15 @@
 
 class Bed extends Product
 {
-    public function __construct(public $img, public $name, public $price, public AnimalProduct $animalType, public $size)
-    {
-    }
+    public $size;
 
-    public function showDetails()
+    public function __construct($percorsoIimg, $name, $price, AnimalProduct $animalType, $size)
     {
-        return "<img src='$this->img' style='width:100px;height:auto;'><br>
-        Nome: $this->name <br>
-        Prezzo: $this->price € <br>
-        Taglia: $this->size <br>";
-    }
+        $this->img = $percorsoIimg;
+        $this->name = $name;
+        $this->price = $price;
+        $this->animalType = $animalType;
 
-    public function getAnimalDetails()
-    {
-        return $this->animalType->getAnimalDetails();
-    }
-
-    public function getProductType()
-    {
-        return "Bed";
+        $this->size = $size;
     }
 }

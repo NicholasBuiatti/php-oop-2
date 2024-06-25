@@ -2,25 +2,15 @@
 
 class Toy extends Product
 {
-    public function __construct(public $img, public $name, public $price, public AnimalProduct $animalType, public $material)
-    {
-    }
+    public $material;
 
-    public function showDetails()
+    public function __construct($percorsoIimg, $name, $price, AnimalProduct $animalType, $material)
     {
-        return "<img src='$this->img' style='width:100px;height:auto;'><br>
-        Nome: $this->name <br>
-        Prezzo: $this->price € <br>
-        Materiale: $this->material <br>";
-    }
-
-    public function getAnimalDetails()
-    {
-        return $this->animalType->getAnimalDetails();
-    }
-
-    public function getProductType()
-    {
-        return "Toy";
+        $this->img = $percorsoIimg;
+        $this->name = $name;
+        $this->price = $price;
+        $this->animalType = $animalType;
+        // KEY AGGIUNTA ALLA SOTTOCLASSE TOY CHE è ESTENSIONE DI PRODUCT
+        $this->material = $material;
     }
 }
