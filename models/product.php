@@ -30,4 +30,15 @@ class Product
     {
         return $this->animalType->getIcon();
     }
+
+    public function className()
+    {
+        if (get_class($this) == 'Food') {
+            return "<p>Peso: $this->peso</p>";
+        } elseif (get_class($this) == 'Toy') {
+            return "<p>Materiale: $this->material</p>";
+        } elseif (get_class($this) == 'Bed') {
+            return "<p>Materiale: $this->size</p>";
+        }
+    }
 };

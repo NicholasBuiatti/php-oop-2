@@ -29,6 +29,7 @@ include __DIR__ . "/store/data.php";
                     <div class="card-body">
                         <?php echo $product->getinfo(); ?>
                         <p>Categoria: <?php echo $product->getAnimalDetails(); ?></p>
+                        <p><?= $product->className() ?></p>
                     </div>
                 </div>
             <?php } ?>
