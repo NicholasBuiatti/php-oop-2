@@ -38,7 +38,7 @@ class Product
         } elseif (get_class($this) == 'Toy') {
             return "<p>Materiale: $this->material</p>";
         } elseif (get_class($this) == 'Bed') {
-            return "<p>Materiale: $this->size</p>";
+            return "<p>Taglia: $this->size</p>";
         }
     }
 };
