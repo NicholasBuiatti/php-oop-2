@@ -13,4 +13,9 @@ class Toy extends Product
         // KEY AGGIUNTA ALLA SOTTOCLASSE TOY CHE è ESTENSIONE DI PRODUCT
         $this->material = $material;
     }
+
+    public function className()
+    {
+        return "<p>Materiale: $this->material</p>";
+    }
 }

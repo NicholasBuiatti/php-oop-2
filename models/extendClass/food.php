@@ -13,4 +13,9 @@ class Food extends Product
 
         $this->peso = $peso;
     }
+
+    public function className()
+    {
+        return "<p>Peso: $this->peso</p>";
+    }
 }

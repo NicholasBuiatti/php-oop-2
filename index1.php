@@ -28,6 +28,8 @@ include __DIR__ . "/store/data.php";
                     <img src="<?= $product->getImage() ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <?php echo $product->getinfo(); ?>
+                        <!-- <p><?php //echo $product->className() 
+                                ?></p> -->
                         <p><?= $product->className() ?></p>
                         <p>Categoria: <?php echo $product->getAnimalDetails(); ?></p>
                     </div>

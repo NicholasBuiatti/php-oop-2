@@ -13,4 +13,9 @@ class Bed extends Product
 
         $this->size = $size;
     }
+
+    public function className()
+    {
+        return "<p>Taglia: $this->size</p>";
+    }
 }

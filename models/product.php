@@ -31,14 +31,23 @@ class Product
         return $this->animalType->getIcon();
     }
 
+    // public function className()
+    // {
+    //     if (get_class($this) == 'Food') {
+    //         return "<p>Peso: $this->peso</p>";
+    //     } elseif (get_class($this) == 'Toy') {
+    //         return "<p>Materiale: $this->material</p>";
+    //     } elseif (get_class($this) == 'Bed') {
+    //         return "<p>Taglia: $this->size</p>";
+    //     } else {
+    //         return "<p>" . get_class($this) . "</p>";
+    //     }
+    // }
+
+
+    //DEFINISCO UNA FUNZIONE CHE POI RISCRIVO IN BASE AL DATO CHE PRENDO DALLA CLASSE (POLIMORFISMO)
     public function className()
     {
-        if (get_class($this) == 'Food') {
-            return "<p>Peso: $this->peso</p>";
-        } elseif (get_class($this) == 'Toy') {
-            return "<p>Materiale: $this->material</p>";
-        } elseif (get_class($this) == 'Bed') {
-            return "<p>Taglia: $this->size</p>";
-        }
+        return "";
     }
 };
